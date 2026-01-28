@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivetha - Software Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Snow Particles Container -->
+    <div class="snow-container" id="snowContainer"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text"> NIVETHA K </span>
+            </div>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#hero" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+<div class="hero-avatar">
+    <div class="avatar-frame">
+        <div class="avatar-placeholder">
+
+            <!-- SVG fallback -->
+            <svg id="avatarSvg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#66d9ff;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#9b7cff;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <circle cx="50" cy="50" r="48" fill="url(#avatarGrad)" opacity="0.15"/>
+                <circle cx="50" cy="35" r="18" fill="#66d9ff"/>
+                <ellipse cx="50" cy="65" rx="22" ry="18" fill="#66d9ff"/>
+            </svg>
+
+            <!-- YOUR IMAGE -->
+            <img
+                id="avatarImg"
+                src="public/assets/Nivetha.jpg"
+                alt="Nivetha Profile"
+                class="avatar-img"
+                onerror="this.style.display='none'; document.getElementById('avatarSvg').style.display='block';"
+            >
+        </div>
+    </div>
+</div>
+
+            <h1 class="hero-title">Hey, I'm <span class="highlight">Nivetha</span></h1>
+            <p class="hero-subtitle">Web Developer | Software Engineer | Creating Smart Experiences</p>
+            
+            <div class="typing-container">
+                <span class="typing-prefix">&gt; </span>
+                <span class="typing-text" id="typingText"></span>
+                <span class="cursor"></span>
+            </div>
+
+            <div class="hero-cta">
+                <button class="btn btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
+                    Explore Projects
+                    <span class="btn-arrow">→</span>
+                </button>
+                <button class="btn btn-secondary" onclick="downloadResume()">
+                    Download Resume
+                    <span class="btn-arrow">↓</span>
+                </button>
+            </div>
+            <br><br><br><br>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <span>Scroll to explore</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <h2 class="section-title">About <span class="highlight">Me</span></h2>
+            
+            <div class="about-content">
+                <div class="about-card glass">
+                    <div class="about-header">
+                        <h3 class="about-title">Who am I?</h3>
+                        <div class="title-underline"></div>
+                    </div>
+                    <p class="about-text">
+                        I’m Nivetha K, a 2nd-year B.Tech IT student from Sri Eshwar College of Engineering with
+                         a strong interest in software development and how real-world systems work.
+                        I specialize in C, Python, Java, MySQL, and web basics like HTML, CSS, and JavaScript, 
+                        along with solid knowledge of Data Structures and Algorithms.
+                        I have independently developed projects such as Student Chatbot for academic support 
+                        and a Waste Management System focused on reducing food waste through organized delivery coordination.
+                        I continuously improve my problem-solving skills by practicing on Skillrack (1200+ problems), 
+                        eetCode, HackerRank, CodeChef, and Codeforces.
+                        I aspire to grow into a Software Development Engineer (SDE) and I’m actively looking
+                         for opportunities to work on meaningful industry-level challenges, learn new technologies, 
+                         and contribute to impactful solutions.
+                    </p>
+                    <p class="about-text">
+                       My mission is to develop practical and innovative applications that use AI and modern technologies
+                       to address real-world challenges. I focus on writing clean, efficient code and continuously improving 
+                       my skills. I am committed to learning, exploring new tools, and building solutions that create meaningful impact.
+                    </p>
+                </div>
+
+                <div class="tech-stack-container">
+                    <h3 class="section-subtitle">Tech Stack</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item glass">
+                            <span class="tech-label">Frontend</span>
+                            <p>React, Vue, HTML5, CSS3, JavaScript</p>
+                        </div>
+                        <div class="tech-item glass">
+                            <span class="tech-label">Backend</span>
+                            <p> Node.js, FastAPI</p>
+                        </div>
+                        <div class="tech-item glass">
+                            <span class="tech-label">Databases</span>
+                            <p>PostgreSQL, MongoDB, Redis</p>
+                        </div>
+                        <div class="tech-item glass">
+                            <span class="tech-label">DevOps</span>
+                            <p>Docker, Kubernetes, CI/CD, AWS</p>
+                        </div>
+                        <div class="tech-item glass">
+                            <span class="tech-label">Tools</span>
+                            <p>Git, VS Code, Linux</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-container">
+            <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+            
+            <div class="projects-grid">
+                <div class="project-card glass">
+                    <div class="project-header">
+                        <h3 class="project-title">AI Chat Assistant</h3>
+                        <div class="project-icon">💬</div>
+                    </div>
+                    <p class="project-description">
+                        An intelligent conversational AI powered by advanced NLP models. Features real-time responses, 
+                        context awareness, and multi-language support.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">LLM</span>
+                        <span class="tech-badge">React</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="project-link">View Code</a>
+                        <a href="#" class="project-link">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card glass">
+                    <div class="project-header">
+                        <h3 class="project-title">ML Data Pipeline</h3>
+                        <div class="project-icon">⚙️</div>
+                    </div>
+                    <p class="project-description">
+                        Automated machine learning pipeline for data processing and model training. Includes data validation, 
+                        feature engineering, and automated hyperparameter tuning.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">TensorFlow</span>
+                        <span class="tech-badge">Docker</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="project-link">View Code</a>
+                        <a href="#" class="project-link">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card glass">
+                    <div class="project-header">
+                        <h3 class="project-title">Web Analytics Dashboard</h3>
+                        <div class="project-icon">📊</div>
+                    </div>
+                    <p class="project-description">
+                        Real-time analytics dashboard with AI-powered insights. Provides predictive analytics, 
+                        anomaly detection, and interactive visualizations.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">D3.js</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="project-link">View Code</a>
+                        <a href="#" class="project-link">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card glass">
+                    <div class="project-header">
+                        <h3 class="project-title">Computer Vision Suite</h3>
+                        <div class="project-icon">👁️</div>
+                    </div>
+                    <p class="project-description">
+                        Advanced image processing and object detection system. Includes real-time video analysis, 
+                        facial recognition, and custom model training.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">PyTorch</span>
+                        <span class="tech-badge">OpenCV</span>
+                        <span class="tech-badge">FastAPI</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="project-link">View Code</a>
+                        <a href="#" class="project-link">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card glass">
+                    <div class="project-header">
+                        <h3 class="project-title">Mobile App - AI Optimizer</h3>
+                        <div class="project-icon">📱</div>
+                    </div>
+                    <p class="project-description">
+                        Cross-platform mobile application with on-device AI optimization. Features offline model execution, 
+                        real-time predictions, and cloud synchronization.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">React Native</span>
+                        <span class="tech-badge">TensorFlow Lite</span>
+                        <span class="tech-badge">Firebase</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="project-link">View Code</a>
+                        <a href="#" class="project-link">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card glass">
+                    <div class="project-header">
+                        <h3 class="project-title">NLP Text Analysis</h3>
+                        <div class="project-icon">📝</div>
+                    </div>
+                    <p class="project-description">
+                        Comprehensive NLP toolkit for text analysis, sentiment detection, and named entity recognition. 
+                        Supports multiple languages and custom model fine-tuning.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">BERT</span>
+                        <span class="tech-badge">Hugging Face</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#" class="project-link">View Code</a>
+                        <a href="#" class="project-link">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="section-container">
+            <h2 class="section-title">Skills &amp; <span class="highlight">Technologies</span></h2>
+            
+            <div class="skills-grid">
+                <div class="skill-pill">Java</div>
+                <div class="skill-pill">DSA</div>
+                <div class="skill-pill">JavaScript</div>
+                <div class="skill-pill">React</div>
+                <div class="skill-pill">HTML5</div>
+                <div class="skill-pill">CSS</div>
+                <div class="skill-pill">Vue.js</div>
+                <div class="skill-pill">Node.js</div>
+                <div class="skill-pill">Django</div>
+                <div class="skill-pill">FastAPI</div>
+                <div class="skill-pill">MySQL</div>
+                <div class="skill-pill">PostgreSQL</div>
+                <div class="skill-pill">MongoDB</div>
+                <!--<div class="skill-pill">Docker</div>
+                <div class="skill-pill">Kubernetes</div>
+                <div class="skill-pill">AWS</div>
+                <div class="skill-pill">TensorFlow</div>
+                <div class="skill-pill">PyTorch</div>
+                <div class="skill-pill">scikit-learn</div>
+                <div class="skill-pill">OpenCV</div>
+                <div class="skill-pill">WebSockets</div>
+                <div class="skill-pill">Hugging Face</div>
+                <div class="skill-pill">LLMs</div>-->
+                <div class="skill-pill">Git</div>
+                <div class="skill-pill">GitHub</div>
+                <div class="skill-pill">Python</div>
+                <div class="skill-pill">CI/CD</div>
+                <div class="skill-pill">Linux</div>
+                <div class="skill-pill">RESTful APIs</div>
+                <div class="skill-pill">GraphQL</div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="section-container">
+            <h2 class="section-title">Professional <span class="highlight">Experience</span></h2>
+            
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content glass">
+                        <span class="timeline-date">2024 - 2024</span>
+                        <h3 class="timeline-title">MERN Stack Developer</h3>
+                        <p class="timeline-company">– iGenuine Technologies  </p>
+                        <p class="timeline-description">
+     Developed full-stack web applications using MongoDB, Express.js, React.js, and Node.js. Built REST APIs, integrated  
+   frontend with backend, and worked with Git for version control   
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-center">
+                    <div class="timeline-line"></div>
+                </div>
+
+                <!-- <div class="timeline-item right">
+                    <div class="timeline-content glass">
+                        <span class="timeline-date">2021 - 2023</span>
+                        <h3 class="timeline-title">Full Stack Developer</h3>
+                        <p class="timeline-company">Digital Solutions Inc</p>
+                        <p class="timeline-description">
+                            Developed full-stack web applications using React and Node.js. Implemented complex features, 
+                            optimized performance, and ensured code quality through testing.
+                        </p>
+                    </div>
+                </div> -->
+<!-- 
+                <div class="timeline-center">
+                    <div class="timeline-line"></div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content glass">
+                        <span class="timeline-date">2019 - 2021</span>
+                        <h3 class="timeline-title">Machine Learning Intern</h3>
+                        <p class="timeline-company">AI Research Labs</p>
+                        <p class="timeline-description">
+                            Contributed to cutting-edge ML research projects. Developed computer vision models and 
+                            participated in published research papers. Gained practical experience with TensorFlow and PyTorch.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-center">
+                    <div class="timeline-line"></div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content glass">
+                        <span class="timeline-date">2018 - 2019</span>
+                        <h3 class="timeline-title">Junior Developer</h3>
+                        <p class="timeline-company">StartUp Ventures</p>
+                        <p class="timeline-description">
+                            Started career building web applications, learning best practices, and collaborating with cross-functional teams. 
+                            Developed skills in problem-solving and agile development.
+                        </p>
+                    </div>
+                </div> -->
+
+                <!-- <div class="timeline-center">
+                    <div class="timeline-line"></div>
+                </div> -->
+            <!-- </div> -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <h2 class="section-title">Get in <span class="highlight">Touch</span></h2>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <p class="contact-subtitle">Let's build something amazing together</p>
+                    <div class="contact-links">
+                        <a href="mailto:nivetha.k2024it@sece.ac.in" class="contact-link">
+                            <span class="contact-icon">📧</span>
+                            nivetha.k2024it@sece.ac.in
+                        </a>
+                        <a href="https://www.linkedin.com/in/nivetha-k-1b4832327/" class="contact-link" target="_blank">
+                            <span class="contact-icon">💼</span>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/Nivetha-K-max" class="contact-link" target="_blank">
+                            <span class="contact-icon">🐙</span>
+                            GitHub
+                        </a>
+                        <a href="https://leetcode.com/u/Nivetha-K/" class="contact-link" target="_blank">
+                            <span class="contact-icon">🧩</span>
+                            LeetCode
+                        </a>
+                    </div>
+                </div>
+
+          <form class="contact-form glass" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+
+               <input type="hidden" name="access_key" value="a13ba7d5-7210-4e60-b13d-fde1a737a2d6">
+
+               <div class="form-group">
+               <input type="text" name="name" placeholder="Your Name" required class="form-input">
+               </div>
+ 
+                <div class="form-group">
+                <input type="email" name="email" placeholder="Your Email" required class="form-input">
+                </div>
+
+               <div class="form-group">
+               <textarea name="message" placeholder="Your Message" rows="5" required class="form-input"></textarea>
+               </div>
+
+              <button type="submit" class="btn btn-primary btn-submit">
+              Send Message <span class="btn-arrow">→</span>
+              </button>
+              </form>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Nivetha. All rights reserved.</p>
+            <p>Crafted with <span class="highlight">💙</span> and futuristic vibes</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
