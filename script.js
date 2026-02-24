@@ -231,7 +231,7 @@ function downloadResume() {
     // Create a simple PDF or document link
     // In a real scenario, this would link to an actual resume file
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/17exdkaKkV5ABtgTbyzv3xitKmLAuVWNK/view?usp=drivesdk';
+    link.href = 'https://drive.google.com/file/d/1OA_NXcuJTXZRuA7jjMSpJBRy6NMcazPI/view?usp=drivesdk';
     link.download = 'Nivetha_Resume.txt';
     link.click();
 
