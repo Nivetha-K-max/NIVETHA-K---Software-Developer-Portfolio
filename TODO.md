@@ -1,6 +1,8 @@
-- [ ] Inspect why website is not working (console errors, syntax/runtime issues)
-- [ ] Fix `script.js` merge-conflict markers so it parses/runs
-- [ ] Verify `index.html` and app entry don’t reference broken legacy scripts
-- [ ] Re-run `npm run dev` and confirm page loads cleanly
-- [ ] If needed, remove legacy DOM script side-effects that conflict with React
+# TODO
+
+- [x] Inspect existing certifications data (found `src/components/Certifications.jsx` `CERTS` array)
+- [x] Swap the DBMS/SQL certification entry with the C & C++ programming entry so the visible ordering follows decreasing years
+
+- [x] Verify the UI renders the swapped order correctly (run dev server)
+
 
