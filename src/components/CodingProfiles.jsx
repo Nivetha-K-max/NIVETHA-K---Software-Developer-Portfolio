@@ -9,7 +9,7 @@ const PROFILES = [
       { label: 'Max Rating',      value: '1489' },
       { label: 'Contests',        value: '25+' },
     ],
-    badge: 'Knight', href: 'https://leetcode.com/u/Nivetha-K/',
+    badge: 'Top Solver', href: 'https://leetcode.com/u/Nivetha-K/',
   },
   {
     platform: 'SkillRack', icon: '🎯', color: '#3b82f6',
